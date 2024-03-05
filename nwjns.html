@@ -1,0 +1,651 @@
+<html>
+	<head>
+	<style>
+		table, th, td {border: 0px solid black;}
+		table {border-spacing: 40px;}
+	</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="image/nj.png"/>
+		<title>NewJeans</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-image: url('image/bg.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+        table {
+            margin: 120px 0px 0px 30px;
+        }
+        div.phone {
+			z-index: -10;
+			position: absolute;
+        }
+        img.bg {
+            height: 1900px;
+            width: 900px;
+            position: fixed;
+        }
+        table.main {
+            background-image: url('image/8.png');
+            background-repeat: no-repeat;
+			background-position-x: -910px;
+			background-position-y: -255px;
+        }
+	</style>
+	<body>
+	<center><table class="main" width="1000" height="2000">
+		<td>
+		<style>
+			table.sub{
+				margin: -10px 43px -150px 43px;
+			}
+		</style>
+			<table class="sub" width=865 border=1>
+		<tr>
+		<td class="1" height=400 colspan=4>
+			<video class="video-slide active" src="image/timetable.mp4" autoplay muted loop></video>
+			<video class="video-slide" src="image/popup.mp4" autoplay muted loop></video>
+			<video class="video-slide" src="image/phoning.mp4" autoplay muted loop></video>
+			<video class="video-slide" src="image/bluebook.mp4" autoplay muted loop></video>
+			<style>
+                video.video-slide {
+                    z-index: -3;
+                    top: 370px;
+                    left: auto;
+                    position: absolute;
+                    width: 781px;
+                    height: 400px;
+                    object-fit: cover;
+                    margin-top: -40px;
+                    border-radius: 20px;
+                }
+
+				div.slider-navigation {
+					z-index: 888;
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transform: translateY(80px);
+					margin-bottom: 25px;
+				}
+
+				div.nav-btn {
+					width: 12px;
+					height: 12px;
+					background: #D7D7D7;
+					border-radius: 50%;
+					cursor: pointer;
+					box-shadow: 0 0 2px rgba(255,255,255,0.5);
+					transition: 0.3s ease;
+					margin-bottom: -200px;
+				}
+
+				div.nav-btn:not(:last-child) {
+					margin-right: 20px;
+				}
+
+				div.nav-btn:hover {
+					transform: scale(1.3);
+				}
+
+				div.nav-btn.active {
+					background: #B0B0B0;
+				}
+
+				video.video-slide {
+					position: absolute;
+					clip-path: circle(0% at 0 50%);
+				}
+
+				video.video-slide.active {
+					clip-path: circle(150% at 0 50%);
+				}
+			</style>
+
+			<div class="slider-navigation">
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+			</div>
+		</td>
+	</tr>
+	<script src="https://kit.fontawesome.com/bf5c623d75.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		const btns = document.querySelectorAll(".nav-btn");
+		const slides = document.querySelectorAll(".video-slide");
+
+		var sliderNav = function (manual) {
+			btns.forEach((btn) => {
+				btn.classList.remove("active");
+			});
+
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			});
+
+			btns[manual].classList.add("active");
+			slides[manual].classList.add("active");
+		}
+
+		btns.forEach((btn, i) => {
+			btn.addEventListener("click", () => {
+				sliderNav(i);
+			})
+		})
+	</script>
+	<tr>
+		<td class="news" width=100 height=60>
+			<style>
+                div.tooltip {
+                    position: relative;
+                }
+				div.tooltip .tooltiptext {
+						visibility: hidden;
+						width: 120px;
+						background-color: black;
+						color: #fff;
+						text-align: center;
+						position:absolute;
+						border-radius: 6px;
+						padding: 5px 0;
+						z-index: 1;
+						font-family: 'Helvetica Neue';
+				}
+				div.tooltip:hover .tooltiptext {
+						visibility: visible;
+				}
+			</style>
+			<div class="tooltip">
+				<form class="button1" id="tooltip" method="" action="">
+					<center>
+						<input name="IB1" type="image" src="image/newsicon.png" height="90" width="90" />
+					</center>
+				</form>
+				<span class="tooltiptext">NEWS</span>
+			</div>
+		</td>
+
+		<td class="service" width=100 height=60>
+			<style>
+                div.tooltip {
+                    position: relative;
+                }
+				div.tooltip .tooltiptext {
+						visibility: hidden;
+						width: 120px;
+						background-color: black;
+						color: #fff;
+						text-align: center;
+						position:absolute;
+						border-radius: 6px;
+						padding: 5px 0;
+						z-index: 1;
+						font-family: 'Helvetica Neue';
+				}
+				div.tooltip:hover .tooltiptext {
+						visibility: visible;
+				}
+			</style>
+			<div class="tooltip">
+				<form class="button2" name="" method="" action="">
+					<center><input name="IB1" type="image" src="image/sricon.png" height="90" width="90" /></center>
+				</form>
+				<span class="tooltiptext">SERVICE</span>
+			</div>
+		</td>
+
+		<td class="phonning" width=100 height=60>
+			<style>
+                div.tooltip {
+                    position: relative;
+                }
+				div.tooltip .tooltiptext {
+						visibility: hidden;
+						width: 120px;
+						background-color: black;
+						color: #fff;
+						text-align: center;
+						position:absolute;
+						border-radius: 6px;
+						padding: 5px 0;
+						z-index: 1;
+						font-family: 'Helvetica Neue';
+				}
+				div.tooltip:hover .tooltiptext {
+						visibility: visible;
+				}
+			</style>
+			<div class="tooltip">
+				<form class="button3" name="" method="" action="">
+					<center><input name="IB1" type="image" src="image/pnicon.png" height="100" width="100" /></center>
+				</form>
+				<span class="tooltiptext">PHONING</span>
+			</div>
+		</td>
+
+		<td class="shop" width=100 height=60>
+			<style>
+				div.tooltip {
+                    position: relative;
+                }
+				div.tooltip .tooltiptext {
+						visibility: hidden;
+						width: 120px;
+						background-color: black;
+						color: #fff;
+						text-align: center;
+						position:absolute;
+						border-radius: 6px;
+						padding: 5px 0;
+						z-index: 1;
+						font-family: 'Helvetica Neue';
+				}
+				div.tooltip:hover .tooltiptext {
+						visibility: visible;
+				}
+			</style>
+			<div class="tooltip">
+				<form class="button4" name="" method="" action="">
+					<input name="IB1" type="image" src="image/shopicon.png" height="100" width="100" />
+				</form>
+				<span class="tooltiptext">SHOP</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="6" height="350" colspan="3">
+			<style>
+				img.image {
+					z-index: -8;
+					position: absolute;
+					width: 552px;
+					height: 350px;
+					object-fit: cover;
+					display: flex;
+					margin: -175px 0px 0px -1px;
+					border-radius: 20px;
+				}
+
+                h1.text-title {
+                    font-size: 25px;
+                    color: #3B3B3B;
+                    text-align: left;
+                    text-transform: capitalize;
+                    padding: 150px 70px 20px 20px;
+                    font-family: '02.10ital fenotype';
+                    letter-spacing: 1.5px;
+                }
+
+				p.description {
+					font-size: 10px;
+					color: black;
+					text-align: left;
+					text-transform: capitalize;
+					padding: 0px 100px 0px 40px;
+					text-align: justify;
+					letter-spacing: 1.5px;
+					font-family: 'Helvetica Neue';
+				}
+
+				div.container {
+					width: 100%;
+				}
+
+				div.content {
+					position: relative;
+					cursor: pointer;
+				}
+
+                div.text-overlay {
+                    background: #ECECEC;
+                    position: absolute;
+                    width: 552px;
+                    height: 350px;
+                    margin-top: -90px;
+                    opacity: 0.2;
+                    transition: all 0.5s ease-in-out;
+                    border-radius: 20px;
+                    margin: -175px 0px 0px -1px;
+                }
+
+				div.content:hover .text-overlay {
+					opacity: 0.85;
+				}
+
+				div.text-details {
+					position: absolute;
+					width: 100%;
+					top: 80%;
+					left: 50%;
+					text-align: center;
+					padding: 0 16px;
+					opacity: 0;
+					transform: translate(-50%, -50%) rotateX(90deg);
+					transition: all 0.5s ease-in-out;
+				}
+
+				div.content:hover .text-details {
+					top: 50%;
+					left: 50%;
+					opacity: 1;
+					transform: translate(-50%, -50%) rotateY(10deg);
+				}
+			</style>
+			<div class="container">
+				<div class="content">
+					<div class="text-overlay"></div>
+					<img class="image" src="image/group5.jpg" alt="" />
+					<div class="text-details">
+						<h1 class="text-title">WE ARE NEWJEANS</h1>
+						<p class="description">
+							here comes NewJeans. we're not blue like other jeans. don't be your typical pair. don't get all washed out.
+							there's a ton of ways to make a difference, and wearing cool NewJeans is one of them. it's time to break free from the blues.
+							wanna come along for a day in life of NewJeans?'
+						</p>
+					</div>
+				</div>
+			</div>
+		</td>
+		<td class="7" height="352">
+			<style>
+                img.pic-slide {
+                    position: absolute;
+                    width: 188px;
+                    height: 352px;
+                    object-fit: cover;
+                    display: flex;
+                    margin: -170px 10px 0px -2px;
+                    cursor: pointer;
+                    border-radius: 20px;
+                }
+                div.slider-navigation2 {
+                    z-index: 888;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateY(80px);
+                    margin-bottom: 12px;
+                }
+
+                div.nav-bttn {
+					z-index: 888;
+                    width: 12px;
+                    height: 12px;
+                    background: #FFFFFF;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    box-shadow: 0 0 2px rgba(255,255,255,0.5);
+                    transition: 0.3s ease;
+                    margin-bottom: -170px;
+                }
+
+                div.nav-bttn:not(:last-child) {
+                        margin-right: 15px;
+                }
+
+                div.nav-bttn:hover {
+                        transform: scale(1.3);
+                }
+
+                div.nav-bttn.active {
+                        background:#A6A7A8;
+                }
+				img.pic-slide {
+                    position: absolute;
+                    clip-path: circle(0% at 0 50%);
+				}
+				img.pic-slide.active {
+                        clip-path: circle(150% at 0 50%);
+                }
+			</style>
+				<img class="pic-slide active" src="image/kkim.png" />
+				<img class="pic-slide" src="image/pham.png" />
+				<img class="pic-slide" src="image/marsh.png" />
+				<img class="pic-slide" src="image/kang.png" />
+				<img class="pic-slide" src="image/lee.png" />
+			<div class="slider-navigation2">
+				<div class="nav-bttn"></div>
+				<div class="nav-bttn"></div>
+				<div class="nav-bttn"></div>
+				<div class="nav-bttn"></div>
+				<div class="nav-bttn"></div>
+			</div>
+		</td>
+	</tr>
+	<script type="text/javascript">
+		const buttons = document.querySelectorAll(".nav-bttn");
+        const pictureslide = document.querySelectorAll(".pic-slide");
+
+		var slider = function (manual) {
+			buttons.forEach((button) => {
+				button.classList.remove("active");
+			});
+
+			pictureslide.forEach((sliding) => {
+				sliding.classList.remove("active");
+			});
+
+            buttons[manual].classList.add("active");
+            pictureslide[manual].classList.add("active");
+		}
+
+		buttons.forEach((button, i) => {
+			button.addEventListener("click", () => {
+				slider(i);
+			})
+		})
+	</script>
+	<tr>
+		<td class="8" height="80" colspan="2">
+			<style>
+                video.video1 {
+                    position: absolute;
+                    width: 357px;
+                    height: 80px;
+                    object-fit: cover;
+                    display: flex;
+                    margin-top: -40px;
+                    margin-left: -2px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+					video.video1:hover {
+						transform: scale(1.1);
+					}
+			</style>
+			<video class="video1" onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+				<source src="image/minji.mp4" type="video/mp4"></source>
+			</video>
+		</td>
+		<td class="9" height="75" colspan="2" rowspan="3">
+			<style>
+                img.announce {
+                    height: 318px;
+                    width: 385px;
+                    object-fit: cover;
+                    display: flex;
+                    position: absolute;
+                    margin-top: -159px;
+                    border-radius: 20px;
+                }
+			</style>
+			<img class="announce" src="image/audition.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td class="10" height="80" colspan="2">
+			<style>
+                video.video2 {
+                    position: absolute;
+                    width: 357px;
+                    height: 80px;
+                    object-fit: cover;
+                    display: flex;
+                    margin-top: -40px;
+                    margin-left: -2px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+					video.video2:hover {
+						transform: scale(1.1);
+					}
+			</style>
+			<video class="video2" onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+				<source src="image/honni.mp4" type="video/mp4"></source>
+			</video>
+		</td>
+	</tr>
+	<tr>
+		<td class="11" height="80" colspan="2">
+			<style>
+                video.video3 {
+                    position: absolute;
+                    width: 357px;
+                    height: 80px;
+                    object-fit: cover;
+                    display: flex;
+                    margin-top: -40px;
+                    margin-left: -2px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+					video.video3:hover {
+						transform: scale(1.1);
+					}
+			</style>
+			<video class="video3" onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+				<source src="image/danielle.mp4" type="video/mp4"></source>
+			</video>
+		</td>
+	</tr>
+	<tr>
+		<td class="12" height="80" colspan="2">
+			<style>
+                video.video4 {
+                    position: absolute;
+                    width: 357px;
+                    height: 80px;
+                    object-fit: cover;
+                    display: flex;
+                    margin-top: -40px;
+                    margin-left: -2px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+				video.video4:hover {
+					transform: scale(1.1);
+				}
+			</style>
+				<video class="video4" onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+					<source src="image/haerin.mp4" type="video/mp4"></source>
+				</video>
+		</td>
+		<td class="13" colspan="2" rowspan="2">
+			<style>
+                video.vid {
+                    height: 198.4px;
+                    width: 385.2px;
+                    object-fit: cover;
+                    display: flex;
+                    position: absolute;
+                    margin-top: -99px;
+                    cursor: pointer;
+                    border-radius: 20px;
+                }
+			</style>
+			<video class="vid" src="image/adorlogo.mp4" autoplay muted loop></video>
+	</tr>
+	<tr>
+		<td class="14" height="80" colspan="2">
+		<style>
+            video.video5 {
+                position: absolute;
+                width: 356px;
+                height: 80px;
+                object-fit: cover;
+                display: flex;
+                margin-top: -40px;
+                margin-left: -1px;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+			video.video5:hover {
+			transform: scale(1.1);
+			}
+		</style>
+			<video class="video5" onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+				<source src="image/hyein.mp4" type="video/mp4"></source>
+			</video>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="15" height="130" colspan="4">
+			<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+			<style>
+                div.wrapper {
+                    display: inline-flex;
+					position: relative;
+                }
+                div.icontwt {
+                    font-size: 45px;
+                    cursor: pointer;
+                    margin-left: 160px;
+					margin-right: 90px;
+					margin-top: -50px;
+                }
+                div.iconig {
+                    font-size: 45px;
+                    cursor: pointer;
+                    margin-right: 90px;
+                    margin-top: -50px;
+                }
+                div.iconyt {
+                    font-size: 45px;
+                    cursor: pointer;
+                    margin-right: 90px;
+                    margin-top: -50px;
+                }
+                div.icontt {
+                    font-size: 45px;
+                    cursor: pointer;
+                    margin-right: 90px;
+					margin-top: -50px;
+                }
+			</style>
+			<div class="wrapper">
+				<div class="icontwt">
+					<span><i class="fa-brands fa-twitter"></i></span>
+				</div>
+				<div class="iconig">
+					<span><i class="fa-brands fa-instagram"></i></span>
+				</div>
+				<div class="iconyt">
+					<span><i class="fa-brands fa-youtube"></i></span>
+				</div>
+				<div class="icontt">
+					<span><i class="fa-brands fa-tiktok"></i></span>
+				</div>
+			</div>
+			</div>
+		</td>
+	</tr>
+</table></center>
+		</td>
+	</body>
+</html>
